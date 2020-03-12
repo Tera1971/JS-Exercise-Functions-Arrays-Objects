@@ -178,9 +178,9 @@ function appleIndex(arr) {
 function isItAnApple(arr) {
  for (var i=0; i < arr.length; i++) {
   if (arr[i] == 'apple') {
- arr[i] = true;
+   arr[i] = true;
 } else{
-  arr[i] = 'false';
+  arr[i] = false;
 }
  }
  return arr;
@@ -272,11 +272,13 @@ return `This is a ${carSelected.car_make} ${carSelected.car_model}.`;
 */
 function getModelYears(inventory) {
   var carYear = [];
-for (let i=0; i < inventory.length; i++)
-var getModelYears = inventory[i];
-carYear.push (getModelYears.car_year);
+  for (let i=0; i < inventory.length; i++) 
+  {
+    var getModelYears = inventory[i];
+    carYear.push (getModelYears.car_year);
+  }
+  return carYear;
 
-return carYear;
 }
 /**
  * ### Challenge `getCarInfoById`
